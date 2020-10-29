@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://demo.trackmygiving.com"],
+    "origin": ["https://fireenjin.madnesslabs.net"],
     "method": ["GET"],
     "maxAgeSeconds": 3600
   }
