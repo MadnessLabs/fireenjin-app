@@ -31,6 +31,8 @@
     "@ionic-native/social-sharing": "^5.29.0",
     "@ionic-native/twitter-connect": "^5.29.0",
     "@ionic/core": "^5.4.1",
+    "@madnesslabs/fireenjin-backend": "^1.0.3",
+    "@madnesslabs/fireenjin-components": "^1.0.2",
     "firebase": "^8.0.0"
   },
   "devDependencies": {
@@ -38,6 +40,7 @@
     "@stencil/core": "~2.0.3",
     "firebase-tools": "^8.11.2",
     "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-typescript": "^1.0.1",
     "typescript": "^3.9.7"
   }
 }

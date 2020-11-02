@@ -1,7 +1,7 @@
 import { ComponentInterface, Build, Component, Listen, h } from "@stencil/core";
-// import { GraphQLClient } from "graphql-request";
-// import "@madnesslabs/trackmygiving-components";
-// import { getSdk, Sdk } from "@madnesslabs/fireenjin-backend/dist/sdk";
+import { GraphQLClient } from "graphql-request";
+import "@madnesslabs/fireenjin-components";
+import { getSdk, Sdk } from "@madnesslabs/fireenjin-backend/dist/sdk";
 
 import env from "../../helpers/env";
 import { AuthService } from "../../helpers/auth";
@@ -25,8 +25,8 @@ export class AppRoot implements ComponentInterface {
   sharePopover: HTMLIonPopoverElement;
   routerEl: HTMLIonRouterElement;
   config = env();
-  // client = Build.isBrowser ? new GraphQLClient(this.config.graphql.url) : null;
-  // sdk = Build.isBrowser ? getSdk(this.client) : null;
+  client = Build.isBrowser ? new GraphQLClient(this.config.graphql.url) : null;
+  sdk = Build.isBrowser ? getSdk(this.client) : null;
   isCordova = window && (window as any).cordova ? true : false;
   modal: HTMLIonModalElement;
   auth = Build.isBrowser
@@ -39,15 +39,15 @@ export class AppRoot implements ComponentInterface {
   defaultProps: {
     auth: AuthService;
     config: any;
-    // client: GraphQLClient;
+    client: GraphQLClient;
     db: DatabaseService;
-    // sdk: Sdk;
+    sdk: Sdk;
   } = {
     auth: this.auth,
     config: this.config,
-    // client: this.client,
+    client: this.client,
     db: this.db,
-    // sdk: this.sdk
+    sdk: this.sdk
   };
 
   @Listen("ionRouteDidChange")

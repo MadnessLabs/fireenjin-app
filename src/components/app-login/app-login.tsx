@@ -41,6 +41,7 @@ export class AppLogin implements ComponentInterface {
             <ion-icon slot="start" name="logo-github" />
             <ion-label>Sign-in With Github</ion-label>
           </ion-button>
+          <my-component></my-component>
         </ion-card>
       </ion-content>
     ];
