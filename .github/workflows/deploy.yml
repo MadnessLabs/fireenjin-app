@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: echo -e "@madnesslabs:registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.npmrc
+      # - run: echo -e "@madnesslabs:registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.npmrc
       - run: npm install --verbose
       - name: Setup Environment
         run: npm run firebase:live -- --token "${{ secrets.FIREBASE_TOKEN }}"
